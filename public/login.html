@@ -2,37 +2,65 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Animal Shelter</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+
   <link href="stylesheets/output.css" rel="stylesheet">
+
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel='icon' href='images/favicon.ico' type='image/png'>
+
 </head>
 
-<body>
+<body class="test">
   <nav class="navbar navbar-default">
     <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Project 2 Name Here</a>
       </div>
-    </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <a class="navbar-brand" href="/login">
+              Login
+            </a>
+            <a class="navbar-brand" href="/">
+              Sign Up
+            </a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
   </nav>
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
+        <h2 class="formStyle">Login Form</h2>
         <form class="login">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+            <label class="formStyle" for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="email-input" placeholder="Email">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
+            <label class="formStyle" for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="password-input" placeholder="Password">
           </div>
           <button type="submit" class="btn btn-default">Login</button>
         </form>
         <br />
-        <p>Or sign up <a href="/">here</a></p>
+        <p class="formStyle">Not already a member? Head over to our sign up page: <a class="formStyle" href="/">Here</a></p>
       </div>
     </div>
   </div>
