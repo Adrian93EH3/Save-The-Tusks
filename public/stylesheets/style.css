@@ -23,3 +23,16 @@ form.login {
   min-width: 100%;
   min-height: 100%;
 }
+
+#rhinoInfo {
+    opacity: 0.8;
+}
+
+.profilePic {
+  max-height: 300px;
+  max-width: 300px;
+}
+
+ul {
+  list-style-type: none;
+}
