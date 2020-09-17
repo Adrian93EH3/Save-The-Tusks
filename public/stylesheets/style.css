@@ -60,10 +60,14 @@ form.login {
 }
 
 .profilePic {
-  max-height: 300px;
-  max-width: 300px;
+  max-height: 400px;
+  max-width: 400px;
 }
 
 ul {
   list-style-type: none;
+}
+
+.rhinoH1 {
+  font-size: 100px;
 }
