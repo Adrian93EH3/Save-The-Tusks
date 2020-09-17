@@ -3,8 +3,15 @@ form.login {
   margin-top: 50px;
 }
 
-@tailwind base;
+.test {
+  background-image: url(../images/rhino.jpg);
+  position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
 
-@tailwind components;
-
-@tailwind utilities;
+.formStyle {
+  color: white;
+}
