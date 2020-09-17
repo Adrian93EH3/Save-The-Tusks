@@ -2,3 +2,16 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.test {
+  background-image: url(../images/rhino.jpg);
+  position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.formStyle {
+  color: white;
+}
