@@ -17,12 +17,13 @@ form.login {
 }
 
 #myVideo {
-  position: fixed;
+  position: relative;
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 25%;
+  height: 25%;
 }
+
 
 .content {
   position: fixed;
@@ -45,6 +46,14 @@ form.login {
 #myBtn:hover {
   background: #ddd;
   color: black;
+}
+.rhinoBG 
+  {
+    background-image: url('https://c402277.ssl.cf1.rackcdn.com/photos/18354/images/hero_full/Black_Rhino_WW1106963.jpg?1576697206');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 #elephantJumbo {
