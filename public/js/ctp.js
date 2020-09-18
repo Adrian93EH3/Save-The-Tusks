@@ -1,6 +1,7 @@
 // the snake is divided into small segments, which are drawn and edited on each 'draw' call
 let numSegments = 10;
 let direction = "right";
+let score = document.getElementById("score")
 
 const xStart = 0; //starting x coordinate for snake
 const yStart = 250; //starting y coordinate for snake
@@ -99,7 +100,8 @@ function setup() {
   scoreElem = createDiv("Score = 0");
   scoreElem.position(20, 20);
   scoreElem.id = "score";
-  scoreElem.style("color", "white");
+  scoreElem.style("color", "black");
+  scoreElem.style("margin-top", "35px");
 
   createCanvas(300, 500);
   frameRate(15);
@@ -123,10 +125,10 @@ function draw() {
   checkForFruit();
 }
 
-const btn = document.querySelector("button");
-btn.addEventListener("click", () => {
-  location.reload();
-});
+// const btn = document.getElementById("resetButton");
+// btn.addEventListener("click", function () {
+//   location.reload();
+// });
 
 function updateFruitCoordinates() {
   /*

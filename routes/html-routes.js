@@ -45,10 +45,10 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/logout", isAuthenticated, (req, res) => {
+  app.get("/catchthepoachers", isAuthenticated, (req, res) => {
     // If the user already has an account send them to the home page
     if (req.user) {
-      res.sendFile(path.join(__dirname, "../public/logout.html"));
+      res.sendFile(path.join(__dirname, "../public/ctp.html"));
     } else {
       res.redirect("/login");
     }

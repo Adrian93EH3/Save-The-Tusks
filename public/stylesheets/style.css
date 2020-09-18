@@ -69,9 +69,6 @@ form.login {
   height: 50vh;
   width: 100vw;
 }
-<<<<<<< HEAD
-
-=======
 table.center {
   margin-left:auto; 
   margin-right:auto;
@@ -121,7 +118,6 @@ table.center {
   left: 5px;
   top: 5px;
 }
->>>>>>> 1e39c50106de3b7918bcfd4aab15bf9b5d76d9ad
 #rhinoInfo {
     opacity: 0.7;
     padding: 20px;
@@ -208,4 +204,9 @@ hr {
     transform: translate(650%, 550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
     position: absolute;
   }
+}
+
+.p5Canvas {
+  margin-left: auto;
+  margin-right: auto;
 }
