@@ -24,7 +24,6 @@ form.login {
   height: 25%;
 }
 
-
 .content {
   position: fixed;
   bottom: 0;
@@ -47,13 +46,12 @@ form.login {
   background: #ddd;
   color: black;
 }
-.rhinoBG 
-  {
-    background-image: url('https://c402277.ssl.cf1.rackcdn.com/photos/18354/images/hero_full/Black_Rhino_WW1106963.jpg?1576697206');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+.rhinoBG {
+  background-image: url("https://c402277.ssl.cf1.rackcdn.com/photos/18354/images/hero_full/Black_Rhino_WW1106963.jpg?1576697206");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 #elephantJumbo {
@@ -64,13 +62,14 @@ form.login {
   height: 50vh;
   width: 100vw;
 }
+
 #rhinoInfo {
-    opacity: 0.7;
-    padding: 20px;
-    font-family: 'PT Serif', serif;
-    size: 20px;
-    font-weight: bold;
-    color: #3C3E3E;
+  padding: 20px;
+  font-family: "PT Serif", serif;
+  size: 20px;
+  font-weight: bold;
+  background-color: rgba(215, 204, 200, 0.5);
+  color: #3c3e3e;
 }
 
 .rhinoProfilePic {
@@ -88,8 +87,8 @@ form.login {
 
 hr {
   height: 2px;
-    width: 55%;
-    background-color: #2c1e15;
+  width: 55%;
+  background-color: #2c1e15;
 }
 .rhinoH1 {
   font-size: 100px;
