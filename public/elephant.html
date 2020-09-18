@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link href="stylesheets/style.css" rel="stylesheet">
     <link rel='icon' href='images/favicon.ico' type='image/png'>
 </head>
@@ -34,11 +35,32 @@
     </nav>
     <div class="jumbotron jumbotron-fluid" style="text-align: center; " id="elephantJumbo">
         <div class="container">
-            <h1 class="display-3" style="font-weight: 600; color: #2c1e15; opacity: 85%; background-color: grey; opacity: 70%; background-blend-mode: color-burn;">African Elephants</h1>
+            <h1 class="display-3"
+                style="font-weight: 600; color: #2c1e15; opacity: 85%; background-color: grey; opacity: 70%;">
+                African Elephants</h1>
         </div>
     </div>
     <div class="container">
-        
+        <div class="row" style="text-align: center;">
+            <div class="col-12">
+                <div class="card"
+                    style="width: 118rem; font-weight: 600; color: #2c1e15; opacity: 85%; background-color: grey; opacity: 70%; background-blend-mode: color-burn;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h3><a
+                                    href="https://www.worldwildlife.org/magazine/issues/winter-2018/articles/the-status-of-african-elephants">
+                                    <i class="fa fa-globe" aria-hidden="true"></i> World Wildlife Organization</a></h3>
+                        </li>
+                        <li class="list-group-item">
+                            <h3><a href="https://support.worldwildlife.org/site/SPageServer?pagename=main_monthly&s_src=AWE2101OQ18299A03751CX&_ga=2.207521424.2026725818.1600360046-914910656.1600360046&_gac=1.217131620.1600362313.CjwKCAjwkoz7BRBPEiwAeKw3q1hs3xLhaDviEoNYxwsVwk3J1mjFN5XmkaUtfcrhEIkuOs0v1Jx_NxoCQIcQAvD_BwE&utm_expid=.W3atnpWES2aNRKISe_MogA.1&utm_referrer=https%3A%2F%2Fwww.worldwildlife.org%2F"
+                                    target="_blank">
+                                    <i class="fa fa-heart" aria-hidden="true"></i> Donate</a>
+                            </h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <div class="div row text-center">
             <div class="div col-12 col-md-12 col-lg-6">
@@ -49,6 +71,7 @@
                     decade. Today, there are just 415,000 elephants across Africa. While elephant poaching is trending
                     downward, with significant declines in East Africa, poaching continues to steer the species
                     dangerously nearer to extinction..</p>
+                <hr>
                 <h3>Key Threats</h3>
                 <ol style="text-align: left;">
                     <li>Poaching for ivory </li>
@@ -58,10 +81,9 @@
             </div>
             <div class="div col-12 col-md-12 col-lg-6">
                 <a><img src="./images/illustration.jpg" width="300px" height="375px"></a>
-                <br />
             </div>
         </div>
-        <hr>
+        <br />
         <hr>
         <div class="div row text-center">
             <div class="div col-12 col-md-12 col-lg-12">
@@ -73,6 +95,44 @@
                     downward, with significant declines in East Africa, poaching continues to steer the species
                     dangerously nearer to extinction..</p>
             </div>
+
+            <div id="pieChart"></div>
+            <script src='p5.js'>
+                let angles = [185, 100, 75];
+
+                function setup() {
+                    createCanvas(720, 400);
+                    noStroke();
+                    noLoop(); // Run once and stop
+                }
+
+                function draw() {
+                    background(100);
+                    pieChart(300, angles);
+                }
+
+                function pieChart(diameter, data) {
+                    let lastAngle = 0;
+                    for (let i = 0; i < data.length; i++) {
+                        let gray = map(i, 0, data.length, 0, 255);
+                        fill(gray);
+                        arc(
+                            width / 2,
+                            height / 2,
+                            diameter,
+                            diameter,
+                            lastAngle,
+                            lastAngle + radians(angles[i])
+                        );
+                        lastAngle += radians(angles[i]);
+                    }
+
+                }
+
+            </script>
+            
+            <!--JS for pie chart-->
+
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -84,37 +144,10 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
                 integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
                 crossorigin="anonymous"></script>
+
+
+
+
 </body>
-<script>
-    let angles = [30, 10, 45, 35, 60, 38, 75, 67];
-
-function setup() {
-  createCanvas(720, 400);
-  noStroke();
-  noLoop(); // Run once and stop
-}
-
-function draw() {
-  background(100);
-  pieChart(300, angles);
-}
-
-function pieChart(diameter, data) {
-  let lastAngle = 0;
-  for (let i = 0; i < data.length; i++) {
-    let gray = map(i, 0, data.length, 0, 255);
-    fill(gray);
-    arc(
-      width / 2,
-      height / 2,
-      diameter,
-      diameter,
-      lastAngle,
-      lastAngle + radians(angles[i])
-    );
-    lastAngle += radians(angles[i]);
-  }
-}
-</script>
 
 </html>
