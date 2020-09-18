@@ -86,6 +86,11 @@ form.login {
   font-size: 20px;
 }
 
+hr {
+  height: 2px;
+    width: 55%;
+    background-color: #2c1e15;
+}
 .rhinoH1 {
   font-size: 100px;
   opacity: 1;
