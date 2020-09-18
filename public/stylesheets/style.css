@@ -67,3 +67,9 @@ form.login {
 ul {
   list-style-type: none;
 }
+
+hr {
+  height: 3px;
+    width: 35%;
+    background-color: #000;
+}

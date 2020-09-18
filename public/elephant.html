@@ -34,39 +34,87 @@
     </nav>
     <div class="jumbotron jumbotron-fluid" style="text-align: center; " id="elephantJumbo">
         <div class="container">
-            <!-- <h1 class="display-3" style="font-weight: 600; color: #2c1e15; opacity: 85%;">African Elephants</h1> -->
+            <h1 class="display-3" style="font-weight: 600; color: #2c1e15; opacity: 85%; background-color: grey; opacity: 70%; background-blend-mode: color-burn;">African Elephants</h1>
         </div>
     </div>
     <div class="container">
+        
+
         <div class="div row text-center">
             <div class="div col-12 col-md-12 col-lg-6">
                 <h2>The Status of African Elephants</h2>
-                <p>In 1930, as many as 10 million wild elephants roamed huge swaths of the African continent. But decades of poaching and conflict have since decimated African elephant populations. In 2016, experts estimated that Africa’s elephant population had dropped by 111,000 elephants in the span of a decade. Today, there are just 415,000 elephants across Africa. While elephant poaching is trending downward, with significant declines in East Africa, poaching continues to steer the species dangerously nearer to extinction..</p>
+                <p>In 1930, as many as 10 million wild elephants roamed huge swaths of the African continent. But
+                    decades of poaching and conflict have since decimated African elephant populations. In 2016, experts
+                    estimated that Africa’s elephant population had dropped by 111,000 elephants in the span of a
+                    decade. Today, there are just 415,000 elephants across Africa. While elephant poaching is trending
+                    downward, with significant declines in East Africa, poaching continues to steer the species
+                    dangerously nearer to extinction..</p>
                 <h3>Key Threats</h3>
-                <ul style="text-align: left;">
-                    <li>Poaching for invory
-                    </li>
+                <ol style="text-align: left;">
+                    <li>Poaching for ivory </li>
                     <li>Habitat loss and fragmentation due to human population expansion and land conversion</li>
                     <li>Human-elephant client</li>
-                </ul>
+                    </0l>
             </div>
             <div class="div col-12 col-md-12 col-lg-6">
-                <a><img src="./images/illustration.jpg" width="300px"
-                        height="375px"></a>
+                <a><img src="./images/illustration.jpg" width="300px" height="375px"></a>
+                <br />
             </div>
         </div>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+        <hr>
+        <hr>
+        <div class="div row text-center">
+            <div class="div col-12 col-md-12 col-lg-12">
+                <h2>The Status of African Elephants</h2>
+                <p>In 1930, as many as 10 million wild elephants roamed huge swaths of the African continent. But
+                    decades of poaching and conflict have since decimated African elephant populations. In 2016, experts
+                    estimated that Africa’s elephant population had dropped by 111,000 elephants in the span of a
+                    decade. Today, there are just 415,000 elephants across Africa. While elephant poaching is trending
+                    downward, with significant declines in East Africa, poaching continues to steer the species
+                    dangerously nearer to extinction..</p>
+            </div>
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+                integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+                integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+                crossorigin="anonymous"></script>
 </body>
+<script>
+    let angles = [30, 10, 45, 35, 60, 38, 75, 67];
+
+function setup() {
+  createCanvas(720, 400);
+  noStroke();
+  noLoop(); // Run once and stop
+}
+
+function draw() {
+  background(100);
+  pieChart(300, angles);
+}
+
+function pieChart(diameter, data) {
+  let lastAngle = 0;
+  for (let i = 0; i < data.length; i++) {
+    let gray = map(i, 0, data.length, 0, 255);
+    fill(gray);
+    arc(
+      width / 2,
+      height / 2,
+      diameter,
+      diameter,
+      lastAngle,
+      lastAngle + radians(angles[i])
+    );
+    lastAngle += radians(angles[i]);
+  }
+}
+</script>
 
 </html>
