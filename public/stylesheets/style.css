@@ -4,8 +4,17 @@ form.login {
 }
 
 .test {
-  background-image: url(../images/rhino.jpg);
+  background-image: url(../images/elephant.jpg);
   position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.test2 {
+  background-image: url(../images/rhino.jpg);
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -16,14 +25,9 @@ form.login {
   color: white;
 }
 
-#myVideo {
-  position: relative;
-  right: 0;
-  bottom: 0;
-  width: 25%;
-  height: 25%;
+.formStyle2 {
+  color: #fff;
 }
-
 
 .content {
   position: fixed;
@@ -47,6 +51,7 @@ form.login {
   background: #ddd;
   color: black;
 }
+
 .rhinoBG 
   {
     background-image: url('https://c402277.ssl.cf1.rackcdn.com/photos/18354/images/hero_full/Black_Rhino_WW1106963.jpg?1576697206');
@@ -151,4 +156,57 @@ hr {
 
 #rhinoInfoSpecies {
   font-size: 20px;
+}
+
+.h1 {
+  transform: translate(0%, 1350%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+  position: absolute;
+  color: black;
+}
+
+.resetButton {
+  transform: translate(650%, 550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+  position: absolute;
+}
+
+@media only screen and (max-width: 320px) {
+  .h1 {
+      transform: translate(0%, 350%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+  position: absolute;
+  color: black;
+  }
+  .resetButton {
+      transform: translate(245%, 2450%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+      position: absolute;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .h1 {
+      transform: translate(0%, 950%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+  position: absolute;
+  color: black;
+  }
+  .resetButton {
+      transform: translate(245%, 2450%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+      position: absolute;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .h1 {
+    transform: translate(0%, 1350%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+    position: absolute;
+    color: black;
+  }
+  
+  .resetButton {
+    transform: translate(650%, 550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+    position: absolute;
+  }
+}
+
+.p5Canvas {
+  margin-left: auto;
+  margin-right: auto;
 }
