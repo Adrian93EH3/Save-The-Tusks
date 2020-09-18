@@ -4,8 +4,17 @@ form.login {
 }
 
 .test {
-  background-image: url(../images/rhino.jpg);
+  background-image: url(../images/elephant.jpg);
   position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.test2 {
+  background-image: url(../images/rhino.jpg);
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -16,12 +25,8 @@ form.login {
   color: white;
 }
 
-#myVideo {
-  position: relative;
-  right: 0;
-  bottom: 0;
-  width: 25%;
-  height: 25%;
+.formStyle2 {
+  color: #fff;
 }
 
 .content {
@@ -46,12 +51,13 @@ form.login {
   background: #ddd;
   color: black;
 }
+
 .rhinoBG {
-  background-image: url("https://c402277.ssl.cf1.rackcdn.com/photos/18354/images/hero_full/Black_Rhino_WW1106963.jpg?1576697206");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+    background-image: url('https://c402277.ssl.cf1.rackcdn.com/photos/18354/images/hero_full/Black_Rhino_WW1106963.jpg?1576697206');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 #elephantJumbo {
@@ -62,7 +68,55 @@ form.login {
   height: 50vh;
   width: 100vw;
 }
-
+table.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+.input-color {
+  position: relative;
+}
+.input-color input {
+  padding-left: 20px;
+}
+.input-color .color-box {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: black;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+.input-color2 {
+  position: relative;
+}
+.input-color2 input {
+  padding-left: 20px;
+}
+.input-color2 .color-box2 {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: grey;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+.input-color3 {
+  position: relative;
+}
+.input-color3 input {
+  padding-left: 20px;
+}
+.input-color3 .color-box3 {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: darkgrey;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
 #rhinoInfo {
   padding: 20px;
   font-family: "PT Serif", serif;
@@ -104,4 +158,57 @@ hr {
 
 #rhinoInfoSpecies {
   font-size: 20px;
+}
+
+.h1 {
+  transform: translate(0%, 1350%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+  position: absolute;
+  color: black;
+}
+
+.resetButton {
+  transform: translate(650%, 550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+  position: absolute;
+}
+
+@media only screen and (max-width: 320px) {
+  .h1 {
+      transform: translate(0%, 350%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+  position: absolute;
+  color: black;
+  }
+  .resetButton {
+      transform: translate(245%, 2450%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+      position: absolute;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .h1 {
+      transform: translate(0%, 950%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+  position: absolute;
+  color: black;
+  }
+  .resetButton {
+      transform: translate(245%, 2450%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+      position: absolute;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .h1 {
+    transform: translate(0%, 1350%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+    position: absolute;
+    color: black;
+  }
+  
+  .resetButton {
+    transform: translate(650%, 550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+    position: absolute;
+  }
+}
+
+.p5Canvas {
+  margin-left: auto;
+  margin-right: auto;
 }

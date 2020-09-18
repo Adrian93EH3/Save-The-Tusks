@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const scoreElem = require("../public/js/ctp")
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -33,7 +34,7 @@ module.exports = function(app) {
   // Route for logging user out
   app.get("/logout", (req, res) => {
     req.logout();
-    res.redirect("/");
+    res.redirect("/login");
   });
 
   // Route for getting some data about our user to be used client side
@@ -50,4 +51,14 @@ module.exports = function(app) {
       });
     }
   });
+
+  // Post route to save a score, make sure to send score and user_id
+  app.post("/api/catchthepoachers", (req, res) => {
+    db.Highscore.create({
+      score: req.body.score,
+      UserId: req.body.UserId
+    });
+  });
+
+  // Get route to retrieve a users scores
 };
