@@ -65,18 +65,36 @@ form.login {
   width: 100vw;
 }
 #rhinoInfo {
-    opacity: 0.8;
+    opacity: 0.7;
+    padding: 20px;
+    font-family: 'PT Serif', serif;
+    size: 20px;
+    font-weight: bold;
+    color: #3C3E3E;
 }
 
-.profilePic {
-  max-height: 400px;
-  max-width: 400px;
+.rhinoProfilePic {
+  max-height: 600px;
+  max-width: 500px;
+  padding: 15px;
+  margin-right: 20px;
 }
 
-ul {
+#rhinoInfoBasicInfo {
   list-style-type: none;
+  padding: 10px;
+  font-size: 20px;
 }
 
 .rhinoH1 {
   font-size: 100px;
+  opacity: 1;
+}
+
+#rhinoInfoP {
+  font-size: 20px;
+}
+
+#rhinoInfoSpecies {
+  font-size: 20px;
 }
