@@ -68,7 +68,7 @@ form.login {
   font-family: "PT Serif", serif;
   size: 20px;
   font-weight: bold;
-  background-color: rgba(215, 204, 200, 0.5);
+  background-color: rgba(215, 204, 200, 0.6);
   color: #3c3e3e;
 }
 
@@ -83,6 +83,9 @@ form.login {
   list-style-type: none;
   padding: 10px;
   font-size: 20px;
+}
+#wwfRhino {
+  color: #0319BB;
 }
 
 hr {
