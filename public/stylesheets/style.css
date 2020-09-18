@@ -66,17 +66,27 @@ form.login {
 }
 #rhinoInfo {
     opacity: 0.8;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    size: 20px;
 }
 
 .profilePic {
-  max-height: 400px;
-  max-width: 400px;
+  max-height: 600px;
+  max-width: 500px;
+  padding: 15px;
+  margin-right: 20px;
 }
 
 ul {
   list-style-type: none;
+  padding: 10px;
 }
 
 .rhinoH1 {
   font-size: 100px;
+}
+
+#rhinoInfoP {
+  font-size: 20px;
 }
