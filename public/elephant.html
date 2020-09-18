@@ -36,7 +36,7 @@
     <div class="jumbotron jumbotron-fluid" style="text-align: center; " id="elephantJumbo">
         <div class="container">
             <h1 class="display-3"
-                style="font-weight: 600; color: #2c1e15; opacity: 85%; background-color: grey; opacity: 70%;">
+                style="font-weight: 600; color: #2c1e15; background-color: grey; opacity: 55%;">
                 African Elephants</h1>
         </div>
     </div>
@@ -87,50 +87,45 @@
         <hr>
         <div class="div row text-center">
             <div class="div col-12 col-md-12 col-lg-12">
-                <h2>The Status of African Elephants</h2>
-                <p>In 1930, as many as 10 million wild elephants roamed huge swaths of the African continent. But
-                    decades of poaching and conflict have since decimated African elephant populations. In 2016, experts
-                    estimated that Africa’s elephant population had dropped by 111,000 elephants in the span of a
-                    decade. Today, there are just 415,000 elephants across Africa. While elephant poaching is trending
-                    downward, with significant declines in East Africa, poaching continues to steer the species
-                    dangerously nearer to extinction..</p>
+                <h2>Dispersal</h2>
+                <p>In 2016, the IUCN reported that Africa’s elephant population had seen its worst decline in 25 years, mostly as the result of intensified poaching for ivory. In East Africa, elephant populations have nearly halved in a decade. Botswana is currently home to more elephants than any other African country, and southern Africa remains a stronghold for 293,000, or 70%, of the estimated remaining African elephants.</p>
+                <br />
+
             </div>
+            <hr>
+            <br />
+            <div id="pieChart">
+                <table class="center" style="text-align: center;">
+                    <tr>
+                        <th>African Elephant Population 1930, 2016, Present</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-color">
+                                <div class="color-box" style="background-color: black;"> </div>Population in 1930
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-color2">
+                                <div class="color-box2" style="background-color: greyy;"></div>Population in 2016
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-color3">
+                                <div class="color-box3" style="background-color: darkgray;"> </div>Population Present
+                                Day
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+            <script src="./js/p5.js"></script>
 
-            <div id="pieChart"></div>
-            <script src='p5.js'>
-                let angles = [185, 100, 75];
-
-                function setup() {
-                    createCanvas(720, 400);
-                    noStroke();
-                    noLoop(); // Run once and stop
-                }
-
-                function draw() {
-                    background(100);
-                    pieChart(300, angles);
-                }
-
-                function pieChart(diameter, data) {
-                    let lastAngle = 0;
-                    for (let i = 0; i < data.length; i++) {
-                        let gray = map(i, 0, data.length, 0, 255);
-                        fill(gray);
-                        arc(
-                            width / 2,
-                            height / 2,
-                            diameter,
-                            diameter,
-                            lastAngle,
-                            lastAngle + radians(angles[i])
-                        );
-                        lastAngle += radians(angles[i]);
-                    }
-
-                }
-
-            </script>
-            
             <!--JS for pie chart-->
 
             <!-- Optional JavaScript -->
