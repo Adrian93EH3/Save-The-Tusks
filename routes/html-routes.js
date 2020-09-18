@@ -26,4 +26,31 @@ module.exports = function(app) {
   app.get("/home", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
+
+  app.get("/elephant", isAuthenticated, (req, res) => {
+    // If the user already has an account send them to the home page
+    if (req.user) {
+      res.sendFile(path.join(__dirname, "../public/elephant.html"));
+    } else {
+      res.redirect("/login");
+    }
+  });
+
+  app.get("/rhino", isAuthenticated, (req, res) => {
+    // If the user already has an account send them to the home page
+    if (req.user) {
+      res.sendFile(path.join(__dirname, "../public/rhino.html"));
+    } else {
+      res.redirect("/login");
+    }
+  });
+
+  app.get("/logout", isAuthenticated, (req, res) => {
+    // If the user already has an account send them to the home page
+    if (req.user) {
+      res.sendFile(path.join(__dirname, "../public/logout.html"));
+    } else {
+      res.redirect("/login");
+    }
+  });
 };
