@@ -52,8 +52,7 @@ form.login {
   color: black;
 }
 
-.rhinoBG 
-  {
+.rhinoBG {
     background-image: url('https://c402277.ssl.cf1.rackcdn.com/photos/18354/images/hero_full/Black_Rhino_WW1106963.jpg?1576697206');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -119,12 +118,12 @@ table.center {
   top: 5px;
 }
 #rhinoInfo {
-    opacity: 0.7;
-    padding: 20px;
-    font-family: 'PT Serif', serif;
-    size: 20px;
-    font-weight: bold;
-    color: #3C3E3E;
+  padding: 20px;
+  font-family: "PT Serif", serif;
+  size: 20px;
+  font-weight: bold;
+  background-color: rgba(215, 204, 200, 0.6);
+  color: #3c3e3e;
 }
 
 .rhinoProfilePic {
@@ -139,11 +138,14 @@ table.center {
   padding: 10px;
   font-size: 20px;
 }
+#wwfRhino {
+  color: #0319BB;
+}
 
 hr {
   height: 2px;
-    width: 55%;
-    background-color: #2c1e15;
+  width: 55%;
+  background-color: #2c1e15;
 }
 .rhinoH1 {
   font-size: 100px;
