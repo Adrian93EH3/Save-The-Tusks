@@ -1,7 +1,10 @@
+// const { data } = require("jquery");
+
 // the snake is divided into small segments, which are drawn and edited on each 'draw' call
 let numSegments = 10;
 let direction = "right";
-let score = document.getElementById("score")
+// let score = document.getElementById("score");
+
 
 const xStart = 0; //starting x coordinate for snake
 const yStart = 250; //starting y coordinate for snake
@@ -13,6 +16,7 @@ const yCor = [];
 let xFruit = 0;
 let yFruit = 0;
 let scoreElem;
+let scoreVal;
 
 /*
  The segments are updated based on the direction of the snake.
@@ -76,7 +80,7 @@ function checkGameStatus() {
     checkSnakeCollision()
   ) {
     noLoop();
-    const scoreVal = parseInt(scoreElem.html().substring(8));
+    scoreVal = parseInt(scoreElem.html().substring(8));
     scoreElem.html("Game ended! Your score was : " + scoreVal);
   }
 }
@@ -125,10 +129,24 @@ function draw() {
   checkForFruit();
 }
 
-// const btn = document.getElementById("resetButton");
-// btn.addEventListener("click", function () {
-//   location.reload();
-// });
+const btn = document.querySelector("#resetButton");
+btn.addEventListener("click", function () {
+  console.log(scoreVal);
+  event.preventDefault;
+  $.ajax({
+    method: "POST",
+    url: "/api/catchthepoachers",
+    data: {
+      score: scoreVal
+    }
+  }).then(data => {
+    console.log(data);
+    location.reload();
+  }).catch(err => {
+    console.log(err);
+    location.reload();
+  });
+});
 
 function updateFruitCoordinates() {
   /*

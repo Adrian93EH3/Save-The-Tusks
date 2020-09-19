@@ -1,7 +1,6 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-const scoreElem = require("../public/js/ctp")
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -56,7 +55,12 @@ module.exports = function(app) {
   app.post("/api/catchthepoachers", (req, res) => {
     db.Highscore.create({
       score: req.body.score,
-      UserId: req.body.UserId
+      UserId: req.user.id
+    }).then(data => {
+      res.sendStatus(200)
+    }).catch(err => {
+      console.log(err)
+      res.sendStatus(500)
     });
   });
 
