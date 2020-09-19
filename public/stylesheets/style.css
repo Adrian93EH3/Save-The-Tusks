@@ -171,15 +171,24 @@ hr {
   position: absolute;
 }
 
+#score {
+  margin-top: -100px;
+}
+
 @media only screen and (max-width: 320px) {
   .h1 {
-      transform: translate(0%, 350%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+      transform: translate(0%, 220%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
   position: absolute;
   color: black;
+  margin-left: 10px;
   }
   .resetButton {
-      transform: translate(245%, 2450%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+      transform: translate(100%, 2550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
       position: absolute;
+  }
+  .p5Canvas {
+    margin-left: 2.5px;
+    margin-top: 90px;
   }
 }
 
@@ -190,25 +199,29 @@ hr {
   color: black;
   }
   .resetButton {
-      transform: translate(245%, 2450%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+      transform: translate(345%, 2450%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
       position: absolute;
+  }
+  .p5Canvas {
+    margin-left: 250px;
+    margin-top: 90px;
   }
 }
 
 @media only screen and (min-width: 1025px) {
   .h1 {
-    transform: translate(0%, 1350%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+    transform: translate(0%, 1550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
     position: absolute;
     color: black;
+    
   }
   
   .resetButton {
-    transform: translate(650%, 550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+    transform: translate(300%, 550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
     position: absolute;
   }
-}
-
-.p5Canvas {
-  margin-left: auto;
-  margin-right: auto;
+  .p5Canvas {
+    margin-left: 10px;
+    margin-top: 90px;
+  }
 }

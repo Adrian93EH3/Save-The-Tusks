@@ -5,7 +5,6 @@ let numSegments = 10;
 let direction = "right";
 // let score = document.getElementById("score");
 
-
 const xStart = 0; //starting x coordinate for snake
 const yStart = 250; //starting y coordinate for snake
 const diff = 10;
@@ -103,9 +102,8 @@ function checkForFruit() {
 function setup() {
   scoreElem = createDiv("Score = 0");
   scoreElem.position(20, 20);
-  scoreElem.id = "score";
   scoreElem.style("color", "black");
-  scoreElem.style("margin-top", "35px");
+  scoreElem.style("margin-top", "100px");
 
   createCanvas(300, 500);
   frameRate(15);
@@ -130,7 +128,7 @@ function draw() {
 }
 
 const btn = document.querySelector("#resetButton");
-btn.addEventListener("click", function () {
+btn.addEventListener("click", () => {
   console.log(scoreVal);
   event.preventDefault;
   $.ajax({
@@ -139,10 +137,12 @@ btn.addEventListener("click", function () {
     data: {
       score: scoreVal
     }
-  }).then(data => {
+  })
+  .then(data => {
     console.log(data);
     location.reload();
-  }).catch(err => {
+  })
+  .catch(err => {
     console.log(err);
     location.reload();
   });
@@ -150,13 +150,13 @@ btn.addEventListener("click", function () {
 
 function updateFruitCoordinates() {
   /*
-    The complex math logic is because I wanted the point to lie
-    in between 100 and width-100, and be rounded off to the nearest
-    number divisible by 10, since I move the snake in multiples of 10.
+  The complex math logic is because I wanted the point to lie
+  in between 100 and width-100, and be rounded off to the nearest
+  number divisible by 10, since I move the snake in multiples of 10.
   */
-
-  xFruit = floor(random(10, (width - 100) / 10)) * 10;
-  yFruit = floor(random(10, (height - 100) / 10)) * 10;
+ 
+ xFruit = floor(random(10, (width - 100) / 10)) * 10;
+ yFruit = floor(random(10, (height - 100) / 10)) * 10;
 }
 
 function keyPressed() {
@@ -166,20 +166,20 @@ function keyPressed() {
         direction = "left";
       }
       break;
-    case 76:
-      if (direction !== "left") {
-        direction = "right";
-      }
-      break;
-    case 73:
-      if (direction !== "down") {
-        direction = "up";
-      }
-      break;
-    case 75:
-      if (direction !== "up") {
-        direction = "down";
-      }
-      break;
-  }
-}
+      case 76:
+        if (direction !== "left") {
+          direction = "right";
+        }
+        break;
+        case 73:
+          if (direction !== "down") {
+            direction = "up";
+          }
+          break;
+          case 75:
+            if (direction !== "up") {
+              direction = "down";
+            }
+            break;
+          }
+        }
