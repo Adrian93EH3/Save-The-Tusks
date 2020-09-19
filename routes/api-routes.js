@@ -56,13 +56,27 @@ module.exports = function(app) {
     db.Highscore.create({
       score: req.body.score,
       UserId: req.user.id
-    }).then(data => {
-      res.sendStatus(200)
-    }).catch(err => {
-      console.log(err)
-      res.sendStatus(500)
-    });
+    })
+      .then(data => {
+        console.log(data), res.sendStatus(200);
+      })
+      .catch(err => {
+        console.log(err);
+        res.sendStatus(500);
+      });
   });
 
   // Get route to retrieve a users scores
+  // Route for getting some data about our user's score to be used client side
+  app.get("/api/user_data", (req, res) => {
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    } else {
+      // Otherwise send back the user's score
+      res.json({
+        score: req.body.score
+      });
+    }
+  });
 };
