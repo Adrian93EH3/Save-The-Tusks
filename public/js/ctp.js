@@ -138,14 +138,14 @@ btn.addEventListener("click", () => {
       score: scoreVal
     }
   })
-  .then(data => {
-    console.log(data);
-    location.reload();
-  })
-  .catch(err => {
-    console.log(err);
-    location.reload();
-  });
+    .then(data => {
+      console.log(data);
+      location.reload();
+    })
+    .catch(err => {
+      console.log(err);
+      location.reload();
+    });
 });
 
 function updateFruitCoordinates() {
@@ -154,9 +154,9 @@ function updateFruitCoordinates() {
   in between 100 and width-100, and be rounded off to the nearest
   number divisible by 10, since I move the snake in multiples of 10.
   */
- 
- xFruit = floor(random(10, (width - 100) / 10)) * 10;
- yFruit = floor(random(10, (height - 100) / 10)) * 10;
+
+  xFruit = floor(random(10, (width - 100) / 10)) * 10;
+  yFruit = floor(random(10, (height - 100) / 10)) * 10;
 }
 
 function keyPressed() {
@@ -166,20 +166,20 @@ function keyPressed() {
         direction = "left";
       }
       break;
-      case 76:
-        if (direction !== "left") {
-          direction = "right";
-        }
-        break;
-        case 73:
-          if (direction !== "down") {
-            direction = "up";
-          }
-          break;
-          case 75:
-            if (direction !== "up") {
-              direction = "down";
-            }
-            break;
-          }
-        }
+    case 76:
+    if (direction !== "left") {
+      direction = "right";
+      }
+    break;
+  case 73:
+    if (direction !== "down") {
+        direction = "up";
+      }
+    break;
+    case 75:
+    if (direction !== "up") {
+        direction = "down";
+    }
+      break;
+  }
+}
