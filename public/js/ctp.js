@@ -103,7 +103,7 @@ function setup() {
   scoreElem = createDiv("Score = 0");
   scoreElem.position(20, 20);
   scoreElem.style("color", "black");
-  scoreElem.style("margin-top", "100px");
+  scoreElem.style("margin-top", "350px");
 
   createCanvas(300, 500);
   frameRate(15);
@@ -148,10 +148,16 @@ btn.addEventListener("click", () => {
     });
 });
 
+<<<<<<< HEAD
 const btn2 = document.querySelector("#showScores");
 btn2.addEventListener("click", () => {
   console.log();
   event.preventDefault;
+=======
+const btn2 = document.querySelector("#getScores");
+btn2.addEventListener("click", () => {
+
+>>>>>>> 1b85a7909064d5729445ad5827671f41755a2f1c
   $.ajax({
     method: "GET",
     url: "/api/getscores"
@@ -161,6 +167,18 @@ btn2.addEventListener("click", () => {
   })
     .then(data => {
       console.log(data);
+<<<<<<< HEAD
+=======
+      const scoreEl = $("#showScores");
+      scoreEl.empty()
+      const scoreGroup = $("<ul>");
+      // Looping through each result item
+      for (let i = 0; i < data.score.length; i++) {
+        const listEl = $("<li>").text(`${data.score[i].User.email.split('@')[0]}: ${data.score[i].score}`);
+        scoreGroup.append(listEl);
+      }
+      scoreEl.append(scoreGroup);
+>>>>>>> 1b85a7909064d5729445ad5827671f41755a2f1c
     })
     .catch(err => {
       console.log(err);

@@ -71,7 +71,8 @@ module.exports = function(app) {
   // Route for getting some data about our user's score to be used client side
   app.get("/api/getscores", (req, res) => {
     db.Highscore.findAll({
-      attributes: ["score"]
+      attributes: ["score"],
+      include: [{model:db.User, attributes:["email"]}]
     }).then(data => {
       console.log(data);
       if (!req.user) {
