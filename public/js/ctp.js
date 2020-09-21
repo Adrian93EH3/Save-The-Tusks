@@ -148,16 +148,9 @@ btn.addEventListener("click", () => {
     });
 });
 
-<<<<<<< HEAD
-const btn2 = document.querySelector("#showScores");
-btn2.addEventListener("click", () => {
-  console.log();
-  event.preventDefault;
-=======
 const btn2 = document.querySelector("#getScores");
 btn2.addEventListener("click", () => {
 
->>>>>>> 1b85a7909064d5729445ad5827671f41755a2f1c
   $.ajax({
     method: "GET",
     url: "/api/getscores"
@@ -167,8 +160,6 @@ btn2.addEventListener("click", () => {
   })
     .then(data => {
       console.log(data);
-<<<<<<< HEAD
-=======
       const scoreEl = $("#showScores");
       scoreEl.empty()
       const scoreGroup = $("<ul>");
@@ -178,7 +169,6 @@ btn2.addEventListener("click", () => {
         scoreGroup.append(listEl);
       }
       scoreEl.append(scoreGroup);
->>>>>>> 1b85a7909064d5729445ad5827671f41755a2f1c
     })
     .catch(err => {
       console.log(err);
