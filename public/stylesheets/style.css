@@ -14,7 +14,7 @@ form.login {
 
 .test2 {
   background-image: url(../images/rhino.jpg);
-  position: relative;
+  position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -201,32 +201,46 @@ hr {
   position: absolute;
 }
 
-#score {
-  margin-top: -100px;
-}
-
-.card-body {
-  transform: translate(125%, 0%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
-  position: absolute;
-  background: #fff;
-}
 .font {
   color: black;
 }
+
+#getScores {
+  margin-left: 10px;
+}
+
+.fix {
+  transform: translate(0%, 3370%);
+}
+
+.fix2 {
+  transform: translate(0%, 4275%);
+}
+
+.fix3 {
+  transform: translate(0%, 4846%);
+}
+
 @media only screen and (max-width: 320px) {
   .h1 {
-      transform: translate(0%, 220%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+      transform: translate(0%, 250%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
   position: absolute;
   color: black;
   margin-left: 10px;
   }
   .resetButton {
-      transform: translate(100%, 2550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+      transform: translate(100%, 3950%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
       position: absolute;
   }
   .p5Canvas {
-    margin-left: 2.5px;
-    margin-top: 90px;
+    margin-left: 9.5px;
+    margin-top: 300px;
+  }
+  .fix {
+    transform: translate(0%, 1970%);
+  }
+  .fix3 {
+    transform: translate(0%, 7550%);
   }
 }
 
@@ -237,29 +251,33 @@ hr {
   color: black;
   }
   .resetButton {
-      transform: translate(345%, 2450%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+      transform: translate(645%, 2450%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
       position: absolute;
   }
   .p5Canvas {
     margin-left: 250px;
-    margin-top: 90px;
+    margin-top: 200px;
+  }
+  .fix3 {
+    transform: translate(0%, 6230%);
   }
 }
 
+
 @media only screen and (min-width: 1025px) {
   .h1 {
-    transform: translate(0%, 1550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+    transform: translate(0%, 1055%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
     position: absolute;
     color: black;
     
   }
   
   .resetButton {
-    transform: translate(300%, 550%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+    transform: translate(500%, 1050%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
     position: absolute;
   }
   .p5Canvas {
     margin-left: 10px;
-    margin-top: 90px;
+    margin-top: 150px;
   }
 }
