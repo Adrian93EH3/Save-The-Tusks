@@ -1,5 +1,5 @@
-# Project-2
-Save The Tusks!
+# Save The Tusks
+Welcome to Save The Tusks! Below you'll find what you need to know more about the project and how to run it on your local machine.
 
 # Description:
 This is a website that has sign up and log in functionality. Once logged in you are redirected to a member page, where you can then visit two different pages about Rhinos and Elephants. These animals are hunted for their tusks and are currently endangered. This site's goal is to raise awareness and redirect people to where they can help. When logging out you can participate in a game called 'Catch the poachers!' This game was added using a client-side library called P5.js. This website is deployed using Heroku.
