@@ -127,9 +127,39 @@ table.center {
 }
 
 .rhinoProfilePic {
-  max-height: 600px;
+  max-height: 800px;
   max-width: 500px;
   padding: 15px;
+  margin-right: 20px;
+}
+
+.blkRhinoAndBaby {
+  max-height: 200px;
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.grtrOneHorn {
+  max-height: 200px;
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.jvnRhino {
+  max-height: 200px;
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.smtrnRhino {
+  max-height: 200px;
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.whtRhinoAndBaby {
+  max-height: 250px;
+  max-width: 200px;
   margin-right: 20px;
 }
 
