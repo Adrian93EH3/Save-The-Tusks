@@ -205,6 +205,14 @@ hr {
   margin-top: -100px;
 }
 
+.card-body {
+  transform: translate(125%, 0%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+  position: absolute;
+  background: #fff;
+}
+.font {
+  color: black;
+}
 @media only screen and (max-width: 320px) {
   .h1 {
       transform: translate(0%, 220%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
