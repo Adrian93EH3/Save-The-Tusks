@@ -46,9 +46,6 @@ Dependencies to be installed:
     - [x] Ensure functionality
     - [x] Display scores
 
-
-
-
 # Development Team:
 - Adrian Diaz: Adrian93EH3 <br />
 - Zona Garcia: AZonaGarcia <br />
@@ -57,3 +54,8 @@ Dependencies to be installed:
 
 # Have Any Questions Or Issues With The Project?
 Feel free to message either one of us on GitHub if you have any questions or issues with our project!
+
+## Links to Website:
+
+[Project 2](https://github.com/Adrian93EH3/Project-2)
+[Project 2 Heroku Deployment](https://murmuring-atoll-31167.herokuapp.com/)
