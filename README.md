@@ -56,6 +56,6 @@ Dependencies to be installed:
 Feel free to message either one of us on GitHub if you have any questions or issues with our project!
 
 ## Links to Website:
-[Project 2](git@github.com:Adrian93EH3/Project-2.git)
+
 [Project 2](https://github.com/Adrian93EH3/Project-2)
 [Project 2 Heroku Deployment](https://murmuring-atoll-31167.herokuapp.com/)
