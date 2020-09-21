@@ -148,6 +148,25 @@ btn.addEventListener("click", () => {
     });
 });
 
+const btn2 = document.querySelector("#showScores");
+btn2.addEventListener("click", () => {
+  console.log();
+  event.preventDefault;
+  $.ajax({
+    method: "GET",
+    url: "/api/getscores"
+    // data: {
+    //   score: req.body.score
+    // }
+  })
+    .then(data => {
+      console.log(data);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
 function updateFruitCoordinates() {
   /*
   The complex math logic is because I wanted the point to lie
