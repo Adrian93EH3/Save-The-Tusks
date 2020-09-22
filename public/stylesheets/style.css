@@ -272,7 +272,7 @@ hr {
 
 @media only screen and (min-width: 1025px) {
   .h1 {
-    transform: translate(0%, 1050%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
+    transform: translate(0%, 1150%); /*puts text over the image with the 1st % affecting the x and the 2nd % affecting the y*/
     position: absolute;
     color: black;
     
@@ -284,7 +284,7 @@ hr {
   }
   .p5Canvas {
     margin-left: 10px;
-    margin-top: 150px;
+    margin-top: 300px;
   }
   #showScores {
     margin-left: 10px;
